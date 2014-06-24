@@ -1,0 +1,37 @@
+{
+    "name": "TestKevin/Library",
+    "description": "Some tests of new tools",
+    "repositories": [
+        {"type": "vcs", "url": "git@github.com:mventures/framework.git"},
+        {"type": "vcs", "url": "git@github.com:mventures/core.git"}
+    ],
+    "require": {
+        "sinergi/config": "0.4.*",
+        "sinergi/dictionary": "0.1.*",
+        "sinergi/event": "0.3.*",
+        "sinergi/gearman": "0.5.*",
+        "klein/klein": "2.0.*",
+        "twig/twig": "1.15.*",
+        "symfony/console": "2.4.*",
+        "doctrine/orm": "2.*",
+        "psr/log": "~1",
+        "cocur/slugify": "0.8.*",
+        "flighthub/framework": "dev-master",
+        "flighthub/core": "dev-master"
+    },
+    "require-dev": {
+        "facebook/xhprof": "dev-master",
+        "phpunit/phpunit": "~4",
+        "phpunit/dbunit": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "TestKevin\\Library\\": "src/Library"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TestKevin\\Library\\Tests\\": ["tests/Library/Tests", "tests/Library/Tests/_includes"]
+        }
+    }
+}

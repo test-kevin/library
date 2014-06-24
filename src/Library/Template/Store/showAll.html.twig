@@ -1,0 +1,21 @@
+{% extends "Resources/master.html.twig" %}
+
+{% block body %}
+
+    {% for store in stores %}
+
+        <a href="store/{{ store.id }}">
+            <strong>
+                {{ store.name }}
+            </strong>
+        </a>
+
+        <br />Adresse:
+        <address>
+            {{ store.address }}
+        </address>
+
+        <br />
+
+    {% endfor %}
+{% endblock %}

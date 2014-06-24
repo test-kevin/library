@@ -1,0 +1,30 @@
+server {
+    listen 80;
+
+    server_name  ~^(?<subdomain>.+\.)*(?<project>.+)\.(?<server>.+)$;
+
+    charset utf-8;
+
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
+
+    location ~ ^/javascripts/(.*) {
+        root   <%= @docroot %>/javascripts;
+        try_files /$1 $1 /$uri;
+    }
+
+    location / {
+        root <%= @docroot %>/dist;
+        index index.html index.htm;
+        try_files /$uri $uri /index.php$uri?$query_string;
+    }
+
+    location /index.php {
+        root <%= @docroot %>/assets;
+        include /etc/nginx/fastcgi_params;
+        fastcgi_param APP_ENV development;
+        fastcgi_param SERVER_NAME $subdomain$project.$server;
+        fastcgi_param SCRIPT_FILENAME <%= @docroot %>/bridge/routes.php;
+        fastcgi_pass  127.0.0.1:9000;
+    }
+}
