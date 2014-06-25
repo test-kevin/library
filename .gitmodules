@@ -1,0 +1,6 @@
+[submodule "vendor/flighthub/core"]
+	path = vendor/flighthub/core
+	url = git@github.com:mventures/core.git
+[submodule "vendor/flighthub/framework"]
+	path = vendor/flighthub/framework
+	url = git@github.com:mventures/framework.git

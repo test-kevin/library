@@ -5,5 +5,5 @@ use Flighthub\Framework\Test\DefaultTestCase;
 
 class StoreEntityTest extends DefaultTestCase
 {
-    
+
 }
