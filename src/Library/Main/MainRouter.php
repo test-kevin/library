@@ -1,20 +1,19 @@
 <?php
-namespace TestKevin\Library\Router;
+namespace TestKevin\Library\Main;
 
 use Klein\Klein;
 use Flighthub\Framework;
-use TestKevin\Library\Registry;
+use TestKevin\Library\Router;
 
-use TestKevin\Library\Book\BookView;
-
-class MainRouter implements Framework\RouterInterface
+class MainRouter extends Router
 {
     /**
-     * @param Registry $registry
      * @param Klein $klein
      */
-    public function create($registry, Klein $klein)
+    public function init(Klein $klein)
     {
+
+        $registry = $this->registry;
 
         /*$klein->with('/books', function() use ($registry, $klein)  {
             $klein->respond('GET', '/?', function() use ($registry) { (new BookView($registry))->showAll(); });

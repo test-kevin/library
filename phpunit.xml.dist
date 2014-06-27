@@ -1,0 +1,15 @@
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         bootstrap="bootstrap/test.php"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         stopOnFailure="false"
+         syntaxCheck="false">
+    <testsuites>
+        <testsuite name="Library Test Suite">
+            <directory>./tests/Library/Tests/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>

@@ -1,20 +1,21 @@
 <?php
-namespace TestKevin\Library\Router;
+namespace TestKevin\Library\Store;
 
 use Klein\Klein;
 use Flighthub\Framework;
 use TestKevin\Library\Registry;
 use TestKevin\Library\Store\StoreView;
+use TestKevin\Library\Router;
 
-class StoreRouter implements Framework\RouterInterface
+class StoreRouter extends Router
 {
     /**
-     * @param Registry $registry
      * @param Klein $klein
      */
-    public function create($registry, Klein $klein)
+    public function init(Klein $klein)
     {
 
+        $registry = $this->registry;
 
         $klein->with('/', function() use ($registry, $klein)  {
             $klein->respond('GET', '/?', function() use ($registry) { (new StoreView($registry))->showAll(); });

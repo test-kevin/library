@@ -1,5 +1,5 @@
 <?php
-namespace TestKevin\Library\View;
+namespace TestKevin\Library\Error;
 
 use TestKevin\Library\View;
 

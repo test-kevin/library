@@ -2,8 +2,8 @@
 namespace TestKevin\Library;
 
 use Flighthub\Framework;
-use TestKevin\Library\Router\MainRouter;
-use TestKevin\Library\Router\StoreRouter;
+use TestKevin\Library\Store\StoreRouter;
+use TestKevin\Library\Main\MainRouter;
 
 class RouterApp extends Framework\RouterApp
 {

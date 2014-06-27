@@ -1,5 +1,5 @@
 <?php
-namespace TestKevin\Library\Router;
+namespace TestKevin\Library\Error;
 
 use Klein\Klein;
 use Flighthub\Framework;
@@ -8,14 +8,15 @@ use TestKevin\Library\View\ErrorView;
 use TestKevin\Library\Router;
 
 
-class ErrorRouter implements Framework\RouterInterface
+class ErrorRouter extends Router
 {
     /**
-     * @param Registry $registry
      * @param Klein $klein
      */
-    public function create($registry, Klein $klein)
+    public function init(Klein $klein)
     {
+        $registry = $this->registry;
+
         $klein->respond('404', function() use ($registry) { (new ErrorView($registry))->showNotFound(); });
     }
 }

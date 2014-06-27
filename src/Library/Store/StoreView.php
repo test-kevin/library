@@ -45,13 +45,10 @@ class StoreView extends View
     }
 
     /**
-     * @return null
+     * not found
      */
     public function notFound()
     {
-
-        $this->getResponse()->code(404);
-        echo $this->render('Store/NotFound.html.twig');
-        return null;
+        $this->code(404)->body($this->render('Store/NotFound.html.twig'));
     }
 }

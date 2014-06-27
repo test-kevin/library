@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <database>
+
+        <table_data name="stores_test">
+
+            <row>
+                <field name="id">1</field>
+                <field name="name">first store</field>
+                <field name="address">123 abc</field>
+            </row>
+
+            <row>
+                <field name="id">2</field>
+                <field name="name">second store</field>
+                <field name="address">456 def</field>
+            </row>
+
+        </table_data>
+
+    </database>
+</mysqldump>
