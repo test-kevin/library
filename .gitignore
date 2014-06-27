@@ -12,8 +12,6 @@ Desktop.ini
 compass_app_log.txt
 .idea
 .vagrant
-phpunit.xml
-phpunit.phar
 composer.phar
 /vendor
 /bower_components
