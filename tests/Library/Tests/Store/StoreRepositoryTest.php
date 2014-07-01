@@ -11,19 +11,19 @@ class StoreEntityTest extends DatabaseTestCase
 
     public function getDataSet()
     {
-        return $this->import('stores');
+        return $this->import('store');
     }
 
     public function tearDown()
     {
-        $this->truncate('stores');
+        $this->truncate('store');
     }
 
     public function testFindAll(){
 
         //$repository = $this->registry->getRepository()->
 
-        $this->assertTrue(true);
+        //$this->assertTrue(true);
 
     }
 }

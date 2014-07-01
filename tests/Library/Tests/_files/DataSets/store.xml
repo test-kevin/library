@@ -3,7 +3,7 @@
 <mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <database>
 
-        <table_data name="stores_test">
+        <table_data name="store">
 
             <row>
                 <field name="id">1</field>
