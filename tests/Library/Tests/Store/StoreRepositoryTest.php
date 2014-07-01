@@ -4,7 +4,7 @@ namespace TestKevin\Library\Tests\Store;
 use Flighthub\Framework\Test\DatabaseTestCase;
 use PHPUnit_Extensions_Database_DataSet_CompositeDataSet;
 
-class StoreEntityTest extends DatabaseTestCase
+class StoreRepositoryTest extends DatabaseTestCase
 {
 
     protected $registry;
@@ -27,3 +27,4 @@ class StoreEntityTest extends DatabaseTestCase
 
     }
 }
+
